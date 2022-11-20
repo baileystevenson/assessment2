@@ -32,12 +32,12 @@ const cart = [
         price: 7.99
     }
 ]
-
+console.log('============================')
 //CODE HERE
 
 // const summedPrice = cart.reduce(/* CALLBACK HERE */)
-
-
+const summedPrice = cart.reduce((a,curr) => {return a + curr.price}, 0)
+console.log(summedPrice)
 //////////////////PROBLEM 2////////////////////
 /*  
     Write a function called `calcFinalPrice` that
@@ -52,8 +52,16 @@ const cart = [
     Note: the numbers passed in for `tax` will be
     decimals, for example: .06 for a 6% tax.
 */
-
+console.log('============================')
 //CODE HERE
+let tax = .06
+let couponValue = -.05
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+    let taxTotal= cartTotal * (1+tax)
+    let finalTotal= taxTotal - couponValue
+    return finalTotal
+}
+console.log(calcFinalPrice(150, 24, 0.06))
 
 
 
@@ -79,12 +87,20 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
-
+properties needed would be name(string), address(string), email(string), phone number(string) and favorited menu items(string)
 */
 
 /*
     Now, create a customer object following your own
     guidelines.
 */
-
+console.log('============================')
 //CODE HERE
+const customer = {
+    name: "Amber",
+    address: "1235 Green Street",
+    email: "1234@buttermail.com",
+    phone: "123-456-7890",
+    favMenuItem: "lasanga"
+}
+console.log(customer)

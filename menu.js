@@ -31,9 +31,15 @@
 */
 
 //CODE HERE
-const pizza = ('pepperoni pizza', 12, 'entree', 90, 5, 'delicious, cheesey'){
-  
+const pizza = {
+     pizza: 'Pepperoni',
+     price: 12,
+     category: 'Entree',
+     populartiy: 9,
+     rating: 5,
+     tags: ["Delicious",'Cheesey']
 }
+
        
 
 
@@ -47,27 +53,27 @@ const pizza = ('pepperoni pizza', 12, 'entree', 90, 5, 'delicious, cheesey'){
 */
 
 //CODE HERE
-let popularity= pizza.filter(i=> i)
-
+console.log(pizza.populartiy)
 /*
     Second, log the second tag in your pizza's
     tags array.
     Use a combination of dots and brackets to
     get the value.
 */
-
+console.log('===================')
 //CODE HERE
 
-
+console.log(pizza.tags[1])
 /*
     Third, destructure the price off of the
     pizza object.
     
     Print the value of your new price variable.
 */
-
+console.log('===================')
 //CODE HERE
-
+let {price} = pizza
+console.log(price)
 
 /*
     Fourth, and last, destructure the category
@@ -75,9 +81,10 @@ let popularity= pizza.filter(i=> i)
 
     Print the value of your category variable. 
 */
-
+console.log('===================')
 //CODE HERE
-
+let{category}= pizza
+console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -90,8 +97,44 @@ let popularity= pizza.filter(i=> i)
     tags. That way, you'll be able to use this
     data in some functions that you'll write.
 */
-
+console.log('===================')
 //CODE HERE
+const foodArr = {
+    name: 'Lasanga',
+    price: 15,
+    category: 'Dinner',
+    populartiy: 10,
+    rating: 5,
+    tags: ['meaty', 'savory'],
+
+    name: "Tripple Chocolate Cake",
+    price: 10,
+    category: 'dessert',
+    populartiy: "7",
+    rating: 3,
+    tags: ['chocolatey, rich'],
+
+    name: 'Garlicy Buttered Bread Sticks',
+    price: 11,
+    category: 'Dinner',
+    populartiy: 6,
+    rating: 5,
+    tags: ['Perfection', 'Toasty'],
+
+    name: 'House Salad',
+    price: 9,
+    category: 'Lunch',
+    populartiy: 8,
+    rating: 4,
+    tags: ['Fresh', 'Ranch'],
+
+    name: 'Roasted Garlic Cloves',
+    price: 8,
+    category: 'Appetizer',
+    populartiy: 9,
+    rating: 3,
+    tags: ['Heaven sent', 'To die for'],
+}
 
 
 
@@ -111,6 +154,11 @@ let popularity= pizza.filter(i=> i)
 
 // const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
+const filteredFood = foodArr.filter(foodObj => {
+    return foodObj.tags.includes('fresh')
+})
+
+console.log(filteredFood)
 
 
 //////////////////PROBLEM 5////////////////////
@@ -151,8 +199,19 @@ let popularity= pizza.filter(i=> i)
     
     Return the filtered array from the entire function
 */
-
+console.log('=====================')
 //CODE HERE
+const filterByProperty =  (property, number, type) => {
+    let filteredArray = foodArr.filter(foodObj => {
+        if(type === 'above') {
+            return foodObj[property] > number
+        }else{
+            return foodObj[property] < number
+        }
+        
+    })
+    return filteredArray
+}
 
 
 /*
@@ -163,3 +222,13 @@ let popularity= pizza.filter(i=> i)
 */
 
 //CODE HERE
+// const filterByProperty = (property, number, type) => {
+//     let filteredArray = foodArr.filter(foodObj => {
+//         if(type === 'above') {
+//             return foodObj[property]  > number
+//         }else {
+//             return foodObj[property] < number        }
+//     })
+//     return filteredArray
+// }
+console.log(filterByProperty('price', 10, 'above'))

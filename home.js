@@ -21,14 +21,15 @@
     'Welcome back, Andrew'
 */
 
-//CODE HERE
-
+//CODE HERE===================')
 
 const greetUser = (username) => {
-    console.log(`Welcome back, ${username}`, greetUser)
+    return `Welcome back, ${username}`
 }
 
+console.log(greetUser(`Amber`))
 
+console.log('================================')
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -53,29 +54,22 @@ const greetUser = (username) => {
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
-function canWeDeliver() {
-    for(let i = 0; i > deliveryAreaZipCodes.length; i++){
-        if(i === 85205, 85204, 85203, 85213, 85206) {
+let zipCode = 84444
+const canWeDeliver = (zipCode) => {
+    for(let i = 0; i < deliveryAreaZipCodes.length; i++){
+        if(i === deliveryAreaZipCodes[i]) {
             console.log(`You're in our delivery zone!`)
-    } else {
-            console.log(`Sorry, we can't deliver to that address`)
+    } 
+            
     }
-  }
-  console.log(canWeDeliver)
-// } . /////// . or another solution...that also doesn't work./////// :(
-function canWeDeliver() {
-    for(let i = 0; i > deliveryAreaZipCodes.length; i++){
-
-canWeDeliver = deliveryAreaZipCodes.foreach(i => i === 85205, 85204, 85203, 85213, 85206)
-    console.log(`You're in our delivery zone!`)
-
-    deliveryAreaZipCodes.filter(i => i !== 85205, 85204, 85203, 85213, 85206)
-    console.log(`Sorry, we can't deliver to that address`)
-    }
+      return `Sorry, we can't deliver to that address`
+      
 }
 console.log(canWeDeliver)
-}
+// // } . /////// 
 
+// }
+console.log('================================')
 /* 
     Problem 2 Continued
 
@@ -94,23 +88,25 @@ console.log(canWeDeliver)
 */
 
 // CODE HERE
-//  canWeDeliverTwo = {
-//     If(canWeDeliverTwo.includes(85205, 85204, 85203, 85213, 85206)){ 
+//  const canWeDeliverTwo = (zipcode) => {
+//     If(deliveryAreaZipCodes.includes(zipCode)) {
 //        console.log(`You're in our delivery zone!`)
 //     } else {
 //         console.log(`Sorry, we can't deliver to that addresss`)
 //     }
+//  }           
+    
 
 // }
-// console.log(canWeDeliverTwo)
-const canWeDeliverTwo = 
-   console.log(deliveryAreaZipCodes.includes(85205), (85204), (85203), (85213), (85206))
-    if(true){
-        console.log(`Yes, we can deliver in your area`)
-    }else{
-        console.log(`No, we don't deliver in your area`)
-    }
 
+const canWeDeliverTwo =(84444) 
+   console.log(deliveryAreaZipCodes.includes(85205), (85204), (85203), (85213), (85206))
+    if(true)
+        `Yes, we can deliver in your area`
+    
+    
+    
+    
 console.log('========================')
 
 
@@ -130,12 +126,12 @@ console.log('========================')
 
 const deals = [
     {
-        title1: '15% Off!', 
-        desc1: 'Applied to your entire order when you spend $30 or more'
+        title: '15% Off!', 
+        desc: 'Applied to your entire order when you spend $30 or more'
     }, 
     {
-        title2: 'Free Kids Meal with 2 Regular Entrees', 
-        desc2: '   This deal lasts until the end of March! '
+        title: 'Free Kids Meal with 2 Regular Entrees', 
+        desc: '   This deal lasts until the end of March! '
     }
 ]
 
@@ -151,7 +147,7 @@ const deals = [
 //CODE HERE
 // 
 
-deals.title1 = '10% Off!'
+deals[0].title = deals[0].title.replace ('15', '10')
 
 
 
@@ -170,6 +166,6 @@ deals.title1 = '10% Off!'
 
 //CODE HERE
 
-deals.desc2 = 'This deal lasts until the end of April!'
+deals[1].desc = deals[1].desc.replace('March','April').trim()
 console.log(deals)
 //  

@@ -22,11 +22,11 @@
 //CODE HERE
 class Employee {
     constructor (name, shift) {
-    this.name= name
-    this.shift=shift
+    this.name= name;
+    this.shift=shift;
    }
 getSchedule(){
-    console.log(`${name} works on ${shift}`)
+    console.log(`${this.name} works on ${this.shift}`)
    }
 
 }
@@ -39,21 +39,21 @@ getSchedule(){
     name: Jess
     shifts: weekday mornings, weekday afternoons
 */
-
+console.log('======================')
 //CODE HERE
 
-let empOne = new Employee('Jess', 'Weekdays')
+let empOne = new Employee('Jess', 'Weekdays, Saturdays')
 
 console.log(empOne)
 /*
     Call the `getSchedule` method on the
     `empOne` object.
 */
-
+console.log('======================')
 //CODE HERE
-// Employee.getSchedule(empOne)
+empOne.getSchedule()
 
-
+console.log('======================')
 
 /*
     Make a copy of the empOne object
@@ -68,9 +68,12 @@ console.log(empOne)
 */
 
 //CODE HERE
-const empOnecopy = {...empOne}
+const empTwo = {...empOne, name: "Nick"}
+
+console.log(empTwo)
 
 
+console.log('======================')
 //////////////////PROBLEM 2////////////////////
 /*  
     Write a class called Manager that *extends* 
@@ -97,11 +100,16 @@ const empOnecopy = {...empOne}
 //CODE HERE
 class Manager extends Employee {
     constructor(name, shift, employees){
-    super(name, shift, employees)
-    this.employee= employees
+    super(name, shift)
+    this.employees= employees
+    }
+    getEmployees(){
+    console.log(`${this.name} manages ${this.employees}`)
+    }
+    addEmployees(emp) {
+    this.employees.push(emp)
+    
 }
-getEmployees
-
 }
 
 /*
@@ -116,27 +124,31 @@ getEmployees
 */
 
 //CODE HERE
-
-
+let manager = new Manager( "Robert", "weekday mornings, weekday afternoons", "Cece and Schmidt")
+console.log(manager)
 /*
     Call the `getEmployees` method on the
     `manager` object.  
 */
 
+console.log('======================')
 //CODE HERE
-
+manager.getEmployees()
 /*
     Call the `addEmployee` method on the 
     `manager` object passing in the string 
     'Coach' or whatever name you'd like.
 */
 
+console.log('======================')
 //CODE HERE 
-
+manager.addEmployees("Lefty")
 /*
     Call the `getEmployees` method on the
     `manager` object again to confirm 
     that an employee was added.
 */
 
+console.log('======================')
 //CODE HERE
+manager.getEmployees()
